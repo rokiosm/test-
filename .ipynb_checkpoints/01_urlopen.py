@@ -1,9 +1,9 @@
 import urllib.request
-import  ssl
+import bs4
 
 url = "https://www.naver.com"
 html = urllib.request.urlopen(url)
 
-print(html)
-context = ssl._create_unverified_context()
+bs_obj = bs4.BeautifulSoup(html, "html.parser")
 
+print(bs_obj)
