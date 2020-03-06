@@ -1,8 +1,9 @@
-import urllib.request
+import requests
 from bs4 import BeautifulSoup
 
-url = "https://www.naver.com/"
-html = urllib.request.urlopen(url).read()
-soup = BeautifulSoup(html, 'html.parser')
+headers = {'User-Agent': 'Mozilla/5.0'}
 
-print(bs_obj)
+URL = 'http://www.naver.com'
+res = requests.get(URL, headers=headers)
+soup = BeautifulSoup(res.text)
+print(soup)
