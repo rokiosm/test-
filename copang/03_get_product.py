@@ -1,0 +1,1 @@
+from libs.stringGetter import getPageString
