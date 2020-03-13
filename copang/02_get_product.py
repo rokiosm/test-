@@ -7,9 +7,11 @@ headers = {
 
 def getProducts(string):
     ul = bsObj.find("ul", {"id":"productList"})
-
-    print(ul)
+    lis = ul.findAll("li")
+    li = lis[1]
+    print(li)
     return []
 
 url = "https://www.coupang.com/np/categories/186764"
 PageString = getPageString(url)
+print(getProducts(PageString))
